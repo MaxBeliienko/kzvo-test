@@ -1,0 +1,21 @@
+.user-panel-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+}
+
+.user-panel-info-text {
+  font-weight: 400;
+  font-size: 12px;
+  color: #757575;
+}
+
+.user-panel-arrow {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  stroke-width: 2px;
+  stroke: #757575;
+  fill: transparent;
+}

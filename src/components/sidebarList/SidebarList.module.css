@@ -1,0 +1,39 @@
+/* Стилі для списку */
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.sidebar-item {
+  display: flex;
+  gap: 14px;
+  justify-content: start;
+  padding: 11px;
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebar-item.expanded {
+  width: 250px;
+}
+
+.sidebar-list > li > svg {
+  width: 24px;
+  height: 24px;
+  stroke: #9197b3;
+  fill: transparent;
+}
+
+.sidebar-list > li > span {
+  color: #9197b3;
+}
+
+.sidebar-item > .item-arrow {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 15px;
+  right: 8px;
+}

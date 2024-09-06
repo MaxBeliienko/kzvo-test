@@ -1,0 +1,10 @@
+.app-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+}
+
+.info-wrapper {
+  padding: 40px 95px;
+  width: 1134px;
+}

@@ -1,0 +1,15 @@
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header-search-input {
+  border-radius: 12px;
+  width: 216px;
+  height: 38px;
+  box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
+  background: #fff;
+  border: none;
+}

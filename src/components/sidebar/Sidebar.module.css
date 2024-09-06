@@ -1,0 +1,52 @@
+/* Стилі для загального контейнера sidebar і стилі для зміни ширини sidebar */
+.sidebar {
+  height: 100%;
+  background-color: #fff;
+  transition: width 0.2s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 28px 78px;
+  box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
+}
+
+.sidebar.collapsed {
+  width: 102px;
+}
+
+.sidebar.expanded {
+  width: 306px;
+}
+
+.sidebar-up-wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.sidebar-down-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Стилі заголовку */
+.sidebar-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dashboard-title-span {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.version-title-span {
+  font-size: 10px;
+  letter-spacing: -0.01em;
+  color: #838383;
+}
