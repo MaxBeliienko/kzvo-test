@@ -15,19 +15,33 @@
   cursor: pointer;
 }
 
+.sidebar-item.active {
+  border-radius: 8px;
+  background: #5932ea;
+  color: #ffffff;
+}
+
 .sidebar-item.expanded {
   width: 250px;
 }
 
-.sidebar-list > li > svg {
+.sidebar-item > svg {
   width: 24px;
   height: 24px;
   stroke: #9197b3;
   fill: transparent;
 }
 
-.sidebar-list > li > span {
+.sidebar-item.active > svg {
+  stroke: #fff;
+}
+
+.sidebar-item span {
   color: #9197b3;
+}
+
+.sidebar-item.active > span {
+  color: #ffffff;
 }
 
 .sidebar-item > .item-arrow {

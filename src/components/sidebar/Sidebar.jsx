@@ -5,11 +5,18 @@ import SidebarList from '../sidebarList/SidebarList';
 import UpgradeToPo from '../upgradeToPro/UpgradeToPro';
 import UserPanel from '../userPanel/UserPanel';
 
-const Sidebar = () => {
+const Sidebar = ({ onSelect }) => {
   // Стан і функція зміни стану toggleSidebar для розширення і стискання Sidebar. Слухач подій доданий на h1
   const [isExpended, setIsExpended] = useState(false);
   const toggleSidebar = () => {
     setIsExpended(!isExpended);
+  };
+
+  // Реалізація зміни активного пункту списку
+  const [activeItem, setActiveItem] = useState('dashboard');
+  const handleSelect = item => {
+    setActiveItem(item);
+    if (onSelect) onSelect(item);
   };
 
   return (
@@ -30,7 +37,11 @@ const Sidebar = () => {
             </div>
           )}
         </h1>
-        <SidebarList isExpended={isExpended} />
+        <SidebarList
+          isExpended={isExpended}
+          onSelect={handleSelect}
+          activeItem={activeItem}
+        />
       </div>
       <div className={styles['sidebar-down-wrapper']}>
         {isExpended && <UpgradeToPo />}

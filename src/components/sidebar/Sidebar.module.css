@@ -1,6 +1,5 @@
 /* Стилі для загального контейнера sidebar і стилі для зміни ширини sidebar */
 .sidebar {
-  height: 100%;
   background-color: #fff;
   transition: width 0.2s;
   overflow: hidden;

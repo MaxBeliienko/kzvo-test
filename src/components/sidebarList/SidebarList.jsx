@@ -1,11 +1,17 @@
 import styles from './SidebarList.module.css';
 import sprite from '../../assets/sprite.svg';
 
-const SidebarList = ({ isExpended }) => {
+const SidebarList = ({ isExpended, onSelect, activeItem }) => {
+  const handleClick = item => {
+    if (onSelect) onSelect(item);
+  };
   return (
     <ul className={styles['sidebar-list']}>
       <li
-        className={`${styles['sidebar-item']} ${isExpended && styles.expanded}`}
+        className={`${styles['sidebar-item']} ${
+          isExpended && styles.expanded
+        } ${activeItem === 'dashboard' ? styles.active : ''}`}
+        onClick={() => handleClick('dashboard')}
       >
         <svg>
           <use href={`${sprite}#icon-dashboard`}></use>
@@ -20,7 +26,10 @@ const SidebarList = ({ isExpended }) => {
         )}
       </li>
       <li
-        className={`${styles['sidebar-item']} ${isExpended && styles.expanded}`}
+        className={`${styles['sidebar-item']} ${
+          isExpended && styles.expanded
+        } ${activeItem === 'product' ? styles.active : ''}`}
+        onClick={() => handleClick('product')}
       >
         <svg>
           <use href={`${sprite}#icon-product`}></use>
@@ -35,7 +44,10 @@ const SidebarList = ({ isExpended }) => {
         )}
       </li>
       <li
-        className={`${styles['sidebar-item']} ${isExpended && styles.expanded}`}
+        className={`${styles['sidebar-item']} ${
+          isExpended && styles.expanded
+        } ${activeItem === 'customers' ? styles.active : ''}`}
+        onClick={() => handleClick('customers')}
       >
         <svg>
           <use href={`${sprite}#icon-customers`}></use>
@@ -50,7 +62,10 @@ const SidebarList = ({ isExpended }) => {
         )}
       </li>
       <li
-        className={`${styles['sidebar-item']} ${isExpended && styles.expanded}`}
+        className={`${styles['sidebar-item']} ${
+          isExpended && styles.expanded
+        } ${activeItem === 'income' ? styles.active : ''}`}
+        onClick={() => handleClick('income')}
       >
         <svg>
           <use href={`${sprite}#icon-income`}></use>
@@ -65,7 +80,10 @@ const SidebarList = ({ isExpended }) => {
         )}
       </li>
       <li
-        className={`${styles['sidebar-item']} ${isExpended && styles.expanded}`}
+        className={`${styles['sidebar-item']} ${
+          isExpended && styles.expanded
+        } ${activeItem === 'promote' ? styles.active : ''}`}
+        onClick={() => handleClick('promote')}
       >
         <svg>
           <use href={`${sprite}#icon-promote`}></use>
@@ -80,7 +98,10 @@ const SidebarList = ({ isExpended }) => {
         )}
       </li>
       <li
-        className={`${styles['sidebar-item']} ${isExpended && styles.expanded}`}
+        className={`${styles['sidebar-item']} ${
+          isExpended && styles.expanded
+        } ${activeItem === 'help' ? styles.active : ''}`}
+        onClick={() => handleClick('help')}
       >
         <svg>
           <use href={`${sprite}#icon-help`}></use>

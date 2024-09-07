@@ -52,7 +52,6 @@ const CustomerTable = () => {
         <select
           className={styles['customer-table-select']}
           onChange={e => setSortKey(e.target.value)}
-          placeholder="Sort by:"
         >
           <option value="name">Name</option>
           <option value="company">Company</option>

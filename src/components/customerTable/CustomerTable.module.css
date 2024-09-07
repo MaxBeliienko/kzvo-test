@@ -14,7 +14,7 @@
 }
 
 .customer-table-info-text {
-  margin-right: 345px;
+  margin-right: 340px;
 }
 
 .customer-table-title {
@@ -37,14 +37,21 @@
   padding-left: 40px;
   background: url('../../images/search.png') no-repeat 10px center; /* Іконка лупи */
   background-size: 24px;
+  margin-right: 10px;
 }
 
 .customer-table-select {
+  appearance: none;
   border-radius: 10px;
   width: 154px;
   height: 38px;
   background: #f9fbff;
   border: none;
+  padding: 10px;
+}
+
+.customer-table-select:focus {
+  outline: none;
 }
 
 .customer-table-wrapper > table {
@@ -140,4 +147,10 @@ tr::after {
 .pagination .active-page {
   background-color: #5932ea;
   color: white;
+}
+
+.status-field {
+  display: flex;
+  align-items: center;
+  height: 69px;
 }
